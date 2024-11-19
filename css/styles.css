@@ -52,13 +52,12 @@ h3, h4 {
 body {
     font-family: 'Poppins', sans-serif;
 }
- /* Sidebar styles */
- #sidebar {
+#sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden outside the viewport */
+    left: -250px; /* Inicialmente oculto fuera de la pantalla */
     width: 250px;
-    height: 100%; /* Full height of the screen */
+    height: 100%; /* Altura completa de la pantalla */
     background-color: #f8f9fa;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
@@ -67,16 +66,16 @@ body {
 }
 
 #sidebar.show {
-    left: 0; /* Slides in from the left */
+    left: 0; /* Aparece desde la izquierda */
 }
 
 #sidebar .close-btn {
     position: absolute;
-    top: 10px;
+    top: 20px;  /* Moverlo un poco hacia abajo */
     left: 10px;
-    font-size: 20px;
+    font-size: 24px;  /* Aumentar el tamaño para hacerlo más visible */
+    color: #ff5733;  /* Color rojo para el botón */
     cursor: pointer;
-    color: #333;
     background: transparent;
     border: none;
     outline: none;
@@ -92,14 +91,17 @@ body {
     color: white;
 }
 
-/* Push content to the right when sidebar is open */
+/* Separar un poco la lista de las opciones del botón de cierre */
+#sidebar .list-group {
+    margin-top: 50px; /* Mover las opciones de la lista hacia abajo */
+}
+
+/* Empujar el contenido hacia la derecha cuando el sidebar esté abierto */
 .content {
     margin-left: 0;
     transition: margin-left 0.3s ease-in-out;
 }
 
 .content.shifted {
-    margin-left: 250px; /* Push content to the right by the sidebar width */
+    margin-left: 250px; /* Empujar el contenido hacia la derecha por el ancho del sidebar */
 }
-
-
