@@ -1,0 +1,105 @@
+
+/* Cambiar colores del tema */
+.bg-light {
+    background-color: #f8f9fa !important; /* Ajusta este color */
+}
+
+.navbar-light .navbar-text {
+    color: #007bff; /* Color del texto del navbar */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.list-group-item {
+    background-color: #f1f1f1;
+    color: #333;
+    border-left: 4px solid #007bff; /* Línea decorativa */
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Personalización del contenido */
+h3, h4 {
+    color: #343a40;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+ /* Sidebar styles */
+ #sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden outside the viewport */
+    width: 250px;
+    height: 100%; /* Full height of the screen */
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1040;
+}
+
+#sidebar.show {
+    left: 0; /* Slides in from the left */
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#sidebar .list-group-item {
+    border: none;
+    padding: 15px 20px;
+}
+
+#sidebar .list-group-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Push content to the right when sidebar is open */
+.content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content.shifted {
+    margin-left: 250px; /* Push content to the right by the sidebar width */
+}
+
+
