@@ -74,7 +74,8 @@ body {
     top: 20px;  /* Moverlo un poco hacia abajo */
     left: 10px;
     font-size: 24px;  /* Aumentar el tamaño para hacerlo más visible */
-    color: #ff5733;  /* Color rojo para el botón */
+    /* dark grey antracita color for the close button */
+    color: #333;
     cursor: pointer;
     background: transparent;
     border: none;
@@ -98,7 +99,6 @@ body {
 
 /* Empujar el contenido hacia la derecha cuando el sidebar esté abierto */
 .content {
-    margin-left: 0;
     transition: margin-left 0.3s ease-in-out;
 }
 
