@@ -71,16 +71,69 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Algoritmoak</th>
-                            <th>Datuak</th>
-                            <th>Sare Neuronalak</th>
+                            <th>KAT</th>
+                            <th>KZAA</th>
+                            <th>LSI</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="#">Link 1</a></td>
-                            <td><a href="#">Link 2</a></td>
-                            <td><a href="#">Link 3</a></td>
+                            <td>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/21808/TFG_TeixeiraMartin.pdf?sequence=1&isAllowed=y"
+                                        class="main-link">Integración del algoritmo CHAID</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/15919/NFC%20Parking%20Payment%20System.pdf?sequence=1&isAllowed=y"
+                                        class="main-link">NFC Parking payment system</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/13358/TrustedPals-KBP-Dokumentazioa.pdf?sequence=1&isAllowed=y"
+                                        class="main-link">TrustedPals plataformarako middlewarearen inplementazioa eta
+                                        simulazioa</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/handle/10810/13141" class="small-link">Adibide
+                                        gehiago</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/15923/NXT_ROS_memoria.pdf?sequence=4&isAllowed=y"
+                                        class="main-link">NXT eta ROS bidezko zabor bilatzailea</a>
+                                </div>
+                                <div>
+                                    <a href="#Procesamiento de imagenes satelitales multiespectrales"
+                                        class="main-link">Procesamiento de imagenes satelitales multiespectrales</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/13360/Memoria_Mikel_Del_Valle_Iriondo.pdf?sequence=2&isAllowed=y"
+                                        class="main-link">Herramienta de creación de modelos STL parametrizables
+                                        mediante Processing</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/handle/10810/13142/recent-submissions"
+                                        class="small-link">Adibide gehiago</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/15918/Memoria_completa.pdf?sequence=3&isAllowed=y"
+                                        class="main-link">Centro de gestión de contenido en RDF</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/15911/Wikipedia%20eta%20Anbiguetate%20Lexikala.pdf?sequence=3&isAllowed=y"
+                                        class="main-link">Wikipedia eta anbiguetate lexikala</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/bitstream/handle/10810/13333/Memoria.pdf?sequence=2&isAllowed=y"
+                                        class="main-link">Sindarren informe sortzailea</a>
+                                </div>
+                                <div>
+                                    <a href="#https://addi.ehu.es/handle/10810/13143/recent-submissions?offset=16"
+                                        class="small-link">Adibide gehiago</a>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -96,36 +149,94 @@
                         <button id="nextMonth" class="btn btn-outline-primary">&gt;</button>
                     </div>
                     <div id="calendarDays" class="calendar-grid"></div>
+                    <div class="calendar-legend mt-3">
+                        <div class="highlight-box"></div>
+                        <span>Lehenengo deialdia</span>
+                    </div>
+                    <div class="mt-4">
+                        <h5>Aurreko urteko defentsen memoriak</h5>
+                        <p>Adibide gisa, aurreko urteetan defendatutako memorien aukeraketa bat jasotzen da goiko estekan.</p>
+                        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/iig-nov" class="btn btn-outline-primary" target="_blank">
+                            Ikusi Memoriak
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Galdetegia Section -->
+            <!-- Galdetegia Section (Quiz Section) -->
             <div class="tab-pane fade" id="galdetegia" role="tabpanel" aria-labelledby="galdetegia-tab">
                 <h4>Galdetegia</h4>
                 <p>Erantzun ondorengo galderak:</p>
                 <form id="quizForm">
                     <div class="form-group">
-                        <label for="q1">1. Zer da Inteligentzia Artifiziala?</label>
+                        <label for="q1">1. Zer da gradu amaierako lana?
+                        </label>
                         <div>
-                            <input type="radio" name="q1" value="correct"> Makina adimentsuak sortzeko teknologia.<br>
-                            <input type="radio" name="q1" value="incorrect"> Eguraldia aztertzeko sistema.<br>
-                            <input type="radio" name="q1" value="incorrect"> Mikrobiologia.<br>
+                            <input type="radio" name="q1" value="incorrect"> Zuzendari batek edo gehiagok gainbegiratutako taldeko lana.<br>
+                            <input type="radio" name="q1" value="correct"> Zuzendari batek edo gehiagok gainbegiratutako banakako lana.<br>
+                            <input type="radio" name="q1" value="incorrect"> Hautazko ikasgaietan bakarrik egindako lana.<br>
+                            <input type="radio" name="q1" value="incorrect"> Kanpo-ikerketako lan ez-gainbegiratua.<br>
+
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="q2">2. Zer teknologia erabiltzen da sare neuronaletan?</label>
+                        <label for="q2">2. Zenbat hautazko irakasgai izan ditzake gainditu gabe ikasle batek GRALa defendatzeko?</label>
                         <div>
-                            <input type="radio" name="q2" value="correct"> Algoritmo genetikoak.<br>
-                            <input type="radio" name="q2" value="incorrect"> Fisika atomikoa.<br>
-                            <input type="radio" name="q2" value="incorrect"> Astronomia.<br>
+                            <input type="radio" name="q2" value="incorrect"> Gainditu gabeko irakasgairik ez.<br>
+                            <input type="radio" name="q2" value="correct"> Gehienez ere hiru hautazko ikasgai.<br>
+                            <input type="radio" name="q2" value="incorrect"> Gehienez ere bost hautazko ikasgai.<br>
+                            <input type="radio" name="q2" value="incorrect"> Gainditu gabeko ikasgai kopurua edozein izan daiteke.<br>
+
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="q3">3. Zein dira Inteligentzia Artifizialaren aplikazioak?</label>
+                        <label for="q3">3. Zenbat deialdi ofizial ditu ikasle batek GrALean matrikulatu ondoren?</label>
                         <div>
-                            <input type="radio" name="q3" value="correct"> Ahozko asistentzia.<br>
-                            <input type="radio" name="q3" value="incorrect"> Lurrikarak aztertzea.<br>
-                            <input type="radio" name="q3" value="incorrect"> Edafologia.<br>
+                            <input type="radio" name="q3" value="incorrect"> Deialdi bakarra.<br>
+                            <input type="radio" name="q3" value="correct"> Bi deialdi.<br>
+                            <input type="radio" name="q3" value="incorrect"> Hiru deialdi.<br>
+                            <input type="radio" name="q3" value="incorrect"> Lau deialdi.<br>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="q4">4. Zer gertatzen da ikasle batek ez badu bere GRALa defendatzen ezarritako deialdietan?</label>
+                        <div>
+                            <input type="radio" name="q4" value="incorrect"> Luzapena eskatu behar du.<br>
+                            <input type="radio" name="q4" value="incorrect"> Defendatzeko eskubidea galtzen du.<br>
+                            <input type="radio" name="q4" value="correct"> Berriro matrikulatu beharko da.<br>
+                            <input type="radio" name="q4" value="incorrect"> Lana zuzenean ez gaindituta bezala ebaluatzen da.<br>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="q5">5. Zein aukerak deskribatzen ditu ondoen GRALean “adostutako” lanak?</label>
+                        <div>
+                            <input type="radio" name="q5" value="incorrect"> Sailek ikasleei esleitzen dieten lanak dira.<br>
+                            <input type="radio" name="q5" value="incorrect"> Unibertsitatetik kanpoko enpresetan egindako lanak dira.<br>
+                            <input type="radio" name="q5" value="correct"> Ikasleak eta irakasleak adosten duten gaiari buruzko lana da.<br>
+                            <input type="radio" name="q5" value="incorrect"> Enpresek zuzendutako lanak dira.<br>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="q6">6. Zein da gradu amaierako lanaren memoriarako gomendatzen den formatua?</label>
+                        <div>
+                            <input type="radio" name="q6" value="incorrect"> 100 orritik gorako txostena.<br>
+                            <input type="radio" name="q6" value="incorrect"> Poster grafiko bat, orrialde-mugarik gabea.<br>
+                            <input type="radio" name="q6" value="correct"> 60 orrialde inguru eta eranskinak.<br>
+                            <input type="radio" name="q6" value="incorrect"> Proiektuaren azalpen-bideo bat.<br>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="q7">7. Zenbat denbora du ikasleak bere gradu amaierako lana publikoki defendatzeko?</label>
+                        <div>
+                            <input type="radio" name="q7" value="incorrect"> 10 minutu.<br>
+                            <input type="radio" name="q7" value="incorrect"> 20 minutu.<br>
+                            <input type="radio" name="q7" value="correct">  30 minutu.<br>
+                            <input type="radio" name="q7" value="incorrect"> 40 minutu.<br>
+
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Bidali</button>
@@ -181,11 +292,20 @@
             const lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
             calendarDays.innerHTML = "";
+
+            // Render empty cells before the first day
             for (let i = 0; i < firstDay; i++) {
                 calendarDays.innerHTML += `<div class="calendar-cell empty"></div>`;
             }
+
+            // Render days with special styling for 4-8 November
             for (let i = 1; i <= lastDate; i++) {
-                calendarDays.innerHTML += `<div class="calendar-cell">${i}</div>`;
+                const isHighlight =
+                    date.getFullYear() === 2024 && // Adjust the year as needed
+                    date.getMonth() === 10 && // November (0-indexed, so 10 = November)
+                    i >= 4 && i <= 8;
+
+                calendarDays.innerHTML += `<div class="calendar-cell${isHighlight ? " highlight" : ""}">${i}</div>`;
             }
         }
 
@@ -215,9 +335,13 @@
             if (answers.get("q1") === "correct") correctCount++;
             if (answers.get("q2") === "correct") correctCount++;
             if (answers.get("q3") === "correct") correctCount++;
+            if (answers.get("q4") === "correct") correctCount++;
+            if (answers.get("q5") === "correct") correctCount++;
+            if (answers.get("q6") === "correct") correctCount++;
+            if (answers.get("q7") === "correct") correctCount++;
 
             // Show results
-            correctAnswersSpan.textContent = `${correctCount} / 3`;
+            correctAnswersSpan.textContent = `${correctCount} / 7`;
             quizResult.classList.remove("d-none");
             quizForm.reset();
         });

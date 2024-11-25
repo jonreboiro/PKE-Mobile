@@ -211,3 +211,59 @@ h3, h4, p {
 #sidebar .list-group-flush.mt-auto {
     margin-top: auto;
 }
+
+/* Estilo principal de los enlaces */
+.main-link {
+    font-size: 16px; /* Tamaño estándar */
+    color: #007bff; /* Azul para resaltar */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaciado entre enlaces */
+    display: block; /* Cada enlace ocupa una línea */
+}
+
+.main-link:hover {
+    text-decoration: underline; /* Subrayado en hover */
+    color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo de los enlaces secundarios */
+.small-link {
+    font-size: 14px; /* Más pequeño */
+    color: #6c757d; /* Gris claro */
+    text-decoration: none;
+    margin-top: 5px; /* Espaciado superior */
+    display: block; /* Cada enlace ocupa una línea */
+}
+
+.small-link:hover {
+    color: #495057; /* Gris más oscuro */
+    text-decoration: underline;
+}
+
+/* Estilos para la leyenda */
+.calendar-cell.highlight {
+    background-color: #ffeb3b; /* Fondo amarillo */
+    color: #000; /* Texto negro */
+    font-weight: bold;
+    border: 2px solid #fbc02d; /* Borde oscuro */
+}
+
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.highlight-box {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border: 2px solid #ffa500;
+    margin-right: 10px;
+}
+
+.calendar-legend span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
