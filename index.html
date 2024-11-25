@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="eu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light">
@@ -21,17 +25,66 @@
     <div id="sidebar">
         <span class="close-btn">&times;</span>
         <div class="list-group list-group-flush">
-            <a href="pages/informazio_orokorra.html" class="list-group-item list-group-item-action">Informazio Orokorra</a>
-            <a href="pages/ing_informatikoa.html" class="list-group-item list-group-item-action">Ingeniaritza Informatikoa</a>
-            <a href="pages/inteligentzia_artifiziala.html" class="list-group-item list-group-item-action">Inteligentzia Artifiziala</a>
+            <a href="pages/informazio_orokorra.html" class="list-group-item list-group-item-action">Informazio
+                Orokorra</a>
+            <a href="pages/ing_informatikoa.html" class="list-group-item list-group-item-action">Ingeniaritza
+                Informatikoa</a>
+            <a href="pages/inteligentzia_artifiziala.html" class="list-group-item list-group-item-action">Inteligentzia
+                Artifiziala</a>
+        </div>
+
+        <div class="list-group list-group-flush mt-auto">
+            <a href="pages/about.html" class="list-group-item list-group-item-action">About Us</a>
+            <a href="index.html" class="list-group-item list-group-item-action active">
+                <i class="fas fa-home"></i>
+            </a>
         </div>
     </div>
 
     <!-- Main Content -->
     <div class="content container text-center mt-4">
-        <h3>Ongi Etorri GrAL Webgunera!</h3>
-        <p>Gradu Amaierako Lana (GrAL) proiektuaren inguruko informazio guztia aurkituko duzu hemen.</p>
-        <p>Aukeratu atal bat menuan hasteko!</p>
+        <h4>Zer ikasten duzu?</h4>
+        <div class="d-flex justify-content-center">
+            <!-- Link to Ingeniaritza Informatikoa -->
+            <a href="pages/ing_informatikoa.html" class="btn btn-outline-primary m-2">
+                <i class="fas fa-laptop-code"></i> Ingeniaritza Informatikoa
+            </a>
+
+            <!-- Link to Inteligentzia Artifiziala -->
+            <a href="pages/inteligentzia_artifiziala.html" class="btn btn-outline-primary m-2">
+                <i class="fas fa-robot"></i> Adimen Artifiziala
+            </a>
+        </div>
+
+
+        <h3>Zer da GrAL bat?</h3>
+        <p style="font-size: 14px; text-align: justify;">Gradu Amaierako Lana (GrAL) funtsezkoa da UPV/EHUko
+            Ingeniaritza Informatikoko eta Adimen Artifizialeko ikasleen prestakuntzan. Banakako proiektu hau zuzendari
+            baten edo gehiagoren gainbegiradapean garatzen da, eta karreran zehar eskuratutako ezagutzak eta
+            trebetasunak modu praktikoan aplikatzeko aukera ematen du.</p>
+        <p style="font-size: 14px; text-align: justify;"> GrALaren bidez, ikasleek ikasitakoa beren aukerako gai batean
+            integratzeaz gain, pentsamendu kritikoa ere garatzen dute, arazo sozial, teknologiko eta etikoei buruz
+            aztertuz eta hausnartuz.
+
+
+            Etorkizuneko ingeniari informatikoentzat eta adimen artifizialean espezialistentzat, berrikuntzak
+            esploratzeko, benetako erronkak ebazteko eta jasangarritasunari laguntzeko plataforma bat da GrAL. </p>
+        <p style="font-size: 14px; text-align: justify;">Ikasle bakoitzak bere lana modu autonomoan planteatzeko,
+            garatzeko eta idazteko ardura hartzen du bere gain, eta horrek sormena eta ekimen pertsonala sustatzen ditu
+            ingurune akademiko zorrotz batean.
+
+
+            Jabetza Intelektualaren Legeak babesten du lan hori, eta ikasleei beren sorkuntzen titular izateko aukera
+            ematen die, originaltasunarekiko eta ikerketarekiko konpromisoa sustatuz. </p>
+        <p style="font-size: 14px; text-align: justify;">Gainera, GrALa epaimahai baten aurrean defendatu behar da, eta
+            horrek egindako ahalegina baliozkotzeaz gain, ikasleak prestatzen ditu beren ideiak eta aurkikuntzak modu
+            eraginkorrean aurkezteko, eremu profesionalean funtsezkoa den trebetasuna.
+
+
+            Orri honetan, Ingeniaritza Informatikoko eta Adimen Artifizialeko ikasleak gidatuko ditugu GrALa egiteko
+            prozesuan zehar, eta baliabideak eskainiko ditugu beren proiektuak arrakastaz gauzatu ahal izateko. Ekin
+            diezaiogun ibilaldi zirraragarri hau prestakuntzaren amaierarantz eta ibilbide profesionalaren hasierarantz!
+        </p>
     </div>
 
     <!-- JavaScript -->
@@ -61,5 +114,12 @@
             }
         });
     </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

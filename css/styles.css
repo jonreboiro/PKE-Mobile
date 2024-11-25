@@ -1,39 +1,8 @@
-
-/* Cambiar colores del tema */
-.bg-light {
-    background-color: #f8f9fa !important; /* Ajusta este color */
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar-light .navbar-text {
-    color: #007bff; /* Color del texto del navbar */
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.list-group-item {
-    background-color: #f1f1f1;
-    color: #333;
-    border-left: 4px solid #007bff; /* Línea decorativa */
-    transition: all 0.3s ease;
-}
-
-.list-group-item:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-/* Personalización del contenido */
 h3, h4 {
     color: #343a40;
     font-family: 'Arial', sans-serif;
@@ -41,6 +10,11 @@ h3, h4 {
     letter-spacing: 1px;
 }
 
+p {
+    text-align: justify;
+}
+
+/* Container and Layout */
 .container {
     margin-top: 30px;
     padding: 20px;
@@ -49,15 +23,33 @@ h3, h4 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+.mt-4 {
+    text-align: center;
 }
+
+.mt-4 p {
+    text-align: justify;
+    display: inline-block;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar and Sidebar */
+.navbar-light .navbar-text {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 #sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
-    left: -250px; /* Inicialmente oculto fuera de la pantalla */
+    left: -250px;
     width: 250px;
-    height: 100%; /* Altura completa de la pantalla */
+    height: 100%;
     background-color: #f8f9fa;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
@@ -66,15 +58,14 @@ body {
 }
 
 #sidebar.show {
-    left: 0; /* Aparece desde la izquierda */
+    left: 0;
 }
 
 #sidebar .close-btn {
     position: absolute;
-    top: 20px;  /* Moverlo un poco hacia abajo */
+    top: 20px;
     left: 10px;
-    font-size: 24px;  /* Aumentar el tamaño para hacerlo más visible */
-    /* dark grey antracita color for the close button */
+    font-size: 24px;
     color: #333;
     cursor: pointer;
     background: transparent;
@@ -92,33 +83,47 @@ body {
     color: white;
 }
 
-/* Separar un poco la lista de las opciones del botón de cierre */
-#sidebar .list-group {
-    margin-top: 50px; /* Mover las opciones de la lista hacia abajo */
+#sidebar .list-group-item:last-child {
+    margin-top: auto;
 }
 
-/* Empujar el contenido hacia la derecha cuando el sidebar esté abierto */
+#sidebar .list-group {
+    margin-top: 50px;
+}
+
 .content {
     transition: margin-left 0.3s ease-in-out;
 }
 
 .content.shifted {
-    margin-left: 250px; /* Empujar el contenido hacia la derecha por el ancho del sidebar */
+    margin-left: 250px;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+/* Button Styles */
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.section {
-    display: none;
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
 }
 
-.section:not(.d-none) {
-    display: block;
+.list-group-item {
+    background-color: #f1f1f1;
+    color: #333;
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease;
 }
 
-/* Calendar Container */
+.list-group-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Calendar Styles */
 .calendar-container {
     max-width: 400px;
     margin: 20px auto;
@@ -128,47 +133,81 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-  }
-  
-  /* Calendar Header */
-  .calendar-header {
+}
+
+.calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
-  }
-  
-  /* Calendar Month Title */
-  .calendar-month {
+}
+
+.calendar-month {
     font-size: 1.5em;
     font-weight: 700;
-  }
-  
-  /* Calendar Grid */
-  .calendar-grid {
+}
+
+.calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+    grid-template-columns: repeat(7, 1fr);
     gap: 5px;
     font-size: 1.2em;
-  }
-  
-  .calendar-grid div {
+}
+
+.calendar-grid div {
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     background-color: #f9f9f9;
-  }
-  
-  .calendar-grid div.day {
+}
+
+.calendar-grid div.day {
     cursor: pointer;
-  }
-  
-  .calendar-grid div.today {
+}
+
+.calendar-grid div.today {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  .calendar-grid div:hover {
+}
+
+.calendar-grid div:hover {
     background-color: #ddd;
-  }
-  
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Image Styles */
+img.rounded-circle {
+    width: 250px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* General Layout Tweaks */
+.section {
+    display: none;
+}
+
+.section:not(.d-none) {
+    display: block;
+}
+
+/* Typography Enhancements */
+h3, h4, p {
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+}
+
+/* Justify Content */
+#sidebar .list-group-flush.mt-auto {
+    margin-top: auto;
+}
