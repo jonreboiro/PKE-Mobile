@@ -105,3 +105,70 @@ body {
 .content.shifted {
     margin-left: 250px; /* Empujar el contenido hacia la derecha por el ancho del sidebar */
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    display: none;
+}
+
+.section:not(.d-none) {
+    display: block;
+}
+
+/* Calendar Container */
+.calendar-container {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Calendar Header */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Calendar Month Title */
+  .calendar-month {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  /* Calendar Grid */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days in a week */
+    gap: 5px;
+    font-size: 1.2em;
+  }
+  
+  .calendar-grid div {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .calendar-grid div.day {
+    cursor: pointer;
+  }
+  
+  .calendar-grid div.today {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .calendar-grid div:hover {
+    background-color: #ddd;
+  }
+  

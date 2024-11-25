@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informazio Orokorra</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <button class="navbar-toggler" id="toggleSidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-text">Informazio Orokorra</span>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <span class="close-btn">&times;</span>
+        <div class="list-group list-group-flush">
+            <a href="../index.html" class="list-group-item list-group-item-action">Hasiera</a>
+            <a href="../pages/informazio_orokorra.html" class="list-group-item list-group-item-action active">Informazio Orokorra</a>
+            <a href="../pages/ing_informatikoa.html" class="list-group-item list-group-item-action">Ingeniaritza Informatikoa</a>
+            <a href="../pages/inteligentzia_artifiziala.html" class="list-group-item list-group-item-action">Inteligentzia Artifiziala</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content container mt-4">
+        <h3>Informazio Orokorra</h3>
+        <p>
+            Ongi etorri Gradu Amaierako Lana (GrAL) proiektuaren informazio orokorrera!
+            Hemen aurkituko duzu informazioa GrAL proiektuaren helburu nagusiei eta lan-prozesuei buruz.
+        </p>
+
+        <h5>Helburu Nagusiak</h5>
+        <ul>
+            <li>Ikasleen gaitasun tekniko eta praktikoak frogatzea.</li>
+            <li>Proiektu batean lan egiteko autonomia garatzea.</li>
+            <li>Gradu ikasketen azken fasean lortutako ezagutzen aplikazioa.</li>
+        </ul>
+
+        <h5>Lan Prozesuak</h5>
+        <ol>
+            <li>Proiektuaren hasierako proposamena.</li>
+            <li>Tutorearekin aldizkako bileren bidez jarraipena.</li>
+            <li>Dokumentazio teknikoa eta memoria idaztea.</li>
+            <li>Proiektuaren aurkezpen eta defentsa.</li>
+        </ol>
+
+        <h5>Laguntza</h5>
+        <p>
+            Informazio gehiago edo laguntza behar baduzu, jar zaitez harremanetan zure tutorearekin edo
+            Fakultateko Ikasketen Zuzendaritzarekin.
+        </p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('toggleSidebar');
+        const closeButton = document.querySelector('#sidebar .close-btn');
+        const content = document.querySelector('.content');
+
+        // Open the sidebar
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.add('show');
+            content.classList.add('shifted');
+        });
+
+        // Close the sidebar
+        closeButton.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+            content.classList.remove('shifted');
+        });
+
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove('show');
+                content.classList.remove('shifted');
+            }
+        });
+    </script>
+</body>
+</html>
