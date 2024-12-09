@@ -23,6 +23,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .mt-4 {
     text-align: center;
 }
@@ -268,3 +269,108 @@ h3, h4, p {
     font-weight: bold;
 }
 
+/* Contenedor flexbox para texto e imagen */
+.text-image-container {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal por defecto */
+    align-items: center; /* Centrado vertical de texto e imagen */
+    justify-content: space-between; /* Espaciado entre texto e imagen */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/* Imagen responsiva */
+.side-image {
+    max-width: 30%; /* La imagen ocupará como máximo el 30% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0; /* Sin márgenes */
+    border-radius: 0; /* Sin bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Suaviza el escalado cuando cambia el tamaño */
+}
+
+/* Texto responsivo */
+.text-image-container p {
+    flex: 1; /* El texto ocupa todo el espacio restante */
+    text-align: justify; /* Justificación del texto */
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media (max-width: 1024px) {
+    .side-image {
+        max-width: 40%; /* La imagen se hace un poco más pequeña */
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .text-image-container {
+        flex-direction: column; /* Apila texto e imagen en pantallas pequeñas */
+        align-items: center; /* Centra elementos en la columna */
+        gap: 15px; /* Reduce el espacio entre ellos */
+    }
+
+    .side-image {
+        max-width: 40%; /* Imagen más pequeña en pantallas pequeñas */
+        width: 100%; /* Garantiza que ocupe el espacio disponible */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .side-image {
+        max-width: 60%; /* Imagen más pequeña en pantallas extra pequeñas */
+    }
+}
+
+
+/* Estilo general para las imágenes pequeñas */
+.small-responsive-image {
+    width: auto; /* Mantiene proporción automática */
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene las proporciones */
+    transition: all 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Alinear y centrar botones e imágenes */
+.d-flex.justify-content-center img,
+.d-flex.justify-content-center a {
+    margin:  40px; /* Separación horizontal entre los botones y las imágenes */
+}
+
+/* Espacio adicional entre las imágenes */
+.d-flex.justify-content-center img {
+    margin-bottom: 30px; /* Más espacio entre las imágenes */
+}
+
+/* Responsividad: Ajustar tamaños en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .small-responsive-image {
+        max-width: 120px; /* Reducir tamaño en pantallas medianas */
+    }
+
+    .btn {
+        font-size: 14px; /* Ajustar tamaño del texto en botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .small-responsive-image {
+        max-width: 100px; /* Reducir aún más para pantallas pequeñas */
+    }
+
+    .btn {
+        font-size: 12px; /* Botones más compactos */
+    }
+}
+
+
+/* Estilo del contenedor principal */
+.info-container {
+    text-align: center; /* Centra todo el contenido dentro del contenedor */
+}
+
+.info-container p {
+    text-align: justify; /* Justifica el texto */
+    display: inline-block; /* Esto permite centrar el contenido */
+    max-width: 80%; /* Limita el ancho del texto para mayor legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
+}
