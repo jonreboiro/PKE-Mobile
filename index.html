@@ -6,10 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradu Amaierako Lana</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
+        /* Navbar */
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            padding-top: 20px;
+        }
+
+        #sidebar.show {
+            left: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Header Section */
+        .header {
+            position: relative;
+            height: 100vh;
+            background: url('img/header-background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: #fff;
+            padding: 50px 20px;
+        }
+
+        .main-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .text-image-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .text-image-container img {
+            max-width: 30%;
+            border-radius: 10px;
+        }
+
+        .text-image-container p {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .text-image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-image-container img {
+                max-width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,12 +142,9 @@
     <div id="sidebar">
         <span class="close-btn">&times;</span>
         <div class="list-group list-group-flush">
-            <a href="pages/informazio_orokorra.html" class="list-group-item list-group-item-action">Informazio
-                Orokorra</a>
-            <a href="pages/ing_informatikoa.html" class="list-group-item list-group-item-action">Ingeniaritza
-                Informatikoa</a>
-            <a href="pages/inteligentzia_artifiziala.html" class="list-group-item list-group-item-action">Inteligentzia
-                Artifiziala</a>
+            <a href="pages/informazio_orokorra.html" class="list-group-item list-group-item-action">Informazio Orokorra</a>
+            <a href="pages/ing_informatikoa.html" class="list-group-item list-group-item-action">Ingeniaritza Informatikoa</a>
+            <a href="pages/inteligentzia_artifiziala.html" class="list-group-item list-group-item-action">Inteligentzia Artifiziala</a>
         </div>
 
         <div class="list-group list-group-flush mt-auto">
@@ -41,85 +155,63 @@
         </div>
     </div>
 
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Gradu Amaierako Lana</h1>
+            <h2>UPV/EHU Informatika fakultateko GrAL-ari buruzko informazioa</h2>
+        </div>
+    </header>
+
     <!-- Main Content -->
-    <div class="content container text-center mt-4">
-        <h4>Zer ikasten duzu?</h4>
+    <section class="main-content">
+        <div class="container">
+            <h3>Zer da GrAL bat?</h3>
+            <div class="text-image-container">
+                <img src="img/fakultatea.jpg" alt="Fakultatea">
+                <p>Gradu Amaierako Lana (GrAL) funtsezkoa da UPV/EHUko Ingeniaritza Informatikoko eta Adimen Artifizialeko
+                    ikasleen prestakuntzan. Banakako proiektu hau zuzendari baten edo gehiagoren gainbegiradapean garatzen
+                    da, eta karreran zehar eskuratutako ezagutzak eta trebetasunak modu praktikoan aplikatzeko aukera
+                    ematen du.</p>
+            </div>
 
-    <!-- Contenedor principal para botones -->
-    <div class="d-flex justify-content-center align-items-center mb-4">
-        <!-- Botón de Ingeniaritza Informatikoa -->
-        <a href="pages/ing_informatikoa.html" class="btn btn-outline-primary m-2">
-            <i class="fas fa-laptop-code"></i> Ingeniaritza Informatikoa
-        </a>
-        <!-- Botón de Adimen Artifiziala -->
-        <a href="pages/inteligentzia_artifiziala.html" class="btn btn-outline-primary m-2">
-            <i class="fas fa-robot"></i> Adimen Artifiziala
-        </a>
-    </div>
+            <div class="text-image-container">
+                <p>GrALaren bidez, ikasleek ikasitakoa beren aukerako gai batean integratzeaz gain, pentsamendu kritikoa ere
+                    garatzen dute, arazo sozial, teknologiko eta etikoei buruz aztertuz eta hausnartuz.</p>
+                <img src="img/ia.jpg" alt="Adimen Artifiziala">
+            </div>
 
-    <!-- Contenedor principal para imágenes -->
-    <div class="d-flex justify-content-center align-items-center">
-        <!-- Imagen de Ingeniaritza Informatikoa -->
-        <img src="img/fakultatea.jpg" alt="Ingeniaritza Informatikoa" class="small-responsive-image m-2">
-        <!-- Imagen de Adimen Artifiziala -->
-        <img src="img/ia.jpg" alt="Adimen Artifiziala" class="small-responsive-image m-2">
-    </div>
-
-
-        <h3>Zer da GrAL bat?</h3>
-        <p style="font-size: 14px; text-align: justify;">Gradu Amaierako Lana (GrAL) funtsezkoa da UPV/EHUko
-            Ingeniaritza Informatikoko eta Adimen Artifizialeko ikasleen prestakuntzan. Banakako proiektu hau zuzendari
-            baten edo gehiagoren gainbegiradapean garatzen da, eta karreran zehar eskuratutako ezagutzak eta
-            trebetasunak modu praktikoan aplikatzeko aukera ematen du.</p>
-        <p style="font-size: 14px; text-align: justify;"> GrALaren bidez, ikasleek ikasitakoa beren aukerako gai batean
-            integratzeaz gain, pentsamendu kritikoa ere garatzen dute, arazo sozial, teknologiko eta etikoei buruz
-            aztertuz eta hausnartuz.
-
-
-            Etorkizuneko ingeniari informatikoentzat eta adimen artifizialean espezialistentzat, berrikuntzak
-            esploratzeko, benetako erronkak ebazteko eta jasangarritasunari laguntzeko plataforma bat da GrAL. </p>
-        <p style="font-size: 14px; text-align: justify;">Ikasle bakoitzak bere lana modu autonomoan planteatzeko,
-            garatzeko eta idazteko ardura hartzen du bere gain, eta horrek sormena eta ekimen pertsonala sustatzen ditu
-            ingurune akademiko zorrotz batean.
-
-
-            Jabetza Intelektualaren Legeak babesten du lan hori, eta ikasleei beren sorkuntzen titular izateko aukera
-            ematen die, originaltasunarekiko eta ikerketarekiko konpromisoa sustatuz. </p>
-        <p style="font-size: 14px; text-align: justify;">Gainera, GrALa epaimahai baten aurrean defendatu behar da, eta
-            horrek egindako ahalegina baliozkotzeaz gain, ikasleak prestatzen ditu beren ideiak eta aurkikuntzak modu
-            eraginkorrean aurkezteko, eremu profesionalean funtsezkoa den trebetasuna.
-
-
-            Orri honetan, Ingeniaritza Informatikoko eta Adimen Artifizialeko ikasleak gidatuko ditugu GrALa egiteko
-            prozesuan zehar, eta baliabideak eskainiko ditugu beren proiektuak arrakastaz gauzatu ahal izateko. Ekin
-            diezaiogun ibilaldi zirraragarri hau prestakuntzaren amaierarantz eta ibilbide profesionalaren hasierarantz!
-        </p>
-    </div>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <a href="pages/ing_informatikoa.html" class="btn btn-outline-primary m-2">
+                    <i class="fas fa-laptop-code"></i> Ingeniaritza Informatikoa
+                </a>
+                <a href="pages/inteligentzia_artifiziala.html" class="btn btn-outline-primary m-2">
+                    <i class="fas fa-robot"></i> Adimen Artifiziala
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- JavaScript -->
     <script>
         const sidebar = document.getElementById('sidebar');
         const toggleButton = document.getElementById('toggleSidebar');
         const closeButton = document.querySelector('#sidebar .close-btn');
-        const content = document.querySelector('.content');
 
         // Open the sidebar
         toggleButton.addEventListener('click', () => {
             sidebar.classList.add('show');
-            content.classList.add('shifted');
         });
 
         // Close the sidebar
         closeButton.addEventListener('click', () => {
             sidebar.classList.remove('show');
-            content.classList.remove('shifted');
         });
 
         // Close the sidebar when clicking outside of it
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
                 sidebar.classList.remove('show');
-                content.classList.remove('shifted');
             }
         });
     </script>
@@ -128,7 +220,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>

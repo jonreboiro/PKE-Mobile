@@ -1,28 +1,35 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente profesional */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto neutro */
+    background-color: #fdfdfd; /* Fondo ligeramente gris */
 }
 
 h3, h4 {
-    color: #343a40;
-    font-family: 'Arial', sans-serif;
+    color: #2c2c2c; /* Gris oscuro */
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 p {
     text-align: justify;
+    font-size: 18px; /* Texto más grande */
+    line-height: 1.8; /* Espaciado entre líneas */
+    color: #444; /* Color de texto ligeramente gris */
 }
 
 /* Container and Layout */
 .container {
-    margin-top: 30px;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: none; /* Rectángulo azul eliminado */
+    box-shadow: none; /* Sombra eliminada */
+    max-width: 1200px; /* Ajuste para centrar contenido */
 }
-
 
 .mt-4 {
     text-align: center;
@@ -30,14 +37,14 @@ p {
 
 .mt-4 p {
     text-align: justify;
-    display: inline-block;
-    max-width: 80%;
+    display: block;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 /* Navbar and Sidebar */
 .navbar-light .navbar-text {
-    color: #007bff;
+    color: #2c2c2c; /* Color gris oscuro */
     font-weight: bold;
     font-size: 1.2em;
 }
@@ -51,7 +58,7 @@ p {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #f8f9fa;
+    background-color: #fff; /* Fondo blanco */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
     transition: left 0.3s ease-in-out;
@@ -67,7 +74,7 @@ p {
     top: 20px;
     left: 10px;
     font-size: 24px;
-    color: #333;
+    color: #555; /* Gris medio */
     cursor: pointer;
     background: transparent;
     border: none;
@@ -77,19 +84,13 @@ p {
 #sidebar .list-group-item {
     border: none;
     padding: 15px 20px;
+    color: #555;
+    transition: all 0.3s ease;
 }
 
 #sidebar .list-group-item:hover {
-    background-color: #007bff;
+    background-color: #333; /* Negro suave */
     color: white;
-}
-
-#sidebar .list-group-item:last-child {
-    margin-top: auto;
-}
-
-#sidebar .list-group {
-    margin-top: 50px;
 }
 
 .content {
@@ -102,25 +103,13 @@ p {
 
 /* Button Styles */
 .btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
+    border-color: #333; /* Negro suave */
+    color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-.list-group-item {
-    background-color: #f1f1f1;
-    color: #333;
-    border-left: 4px solid #007bff;
-    transition: all 0.3s ease;
-}
-
-.list-group-item:hover {
-    background-color: #007bff;
+    background-color: #333;
     color: white;
 }
 
@@ -129,11 +118,12 @@ p {
     max-width: 400px;
     margin: 20px auto;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd; /* Gris claro */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    background-color: #fff; /* Fondo blanco */
 }
 
 .calendar-header {
@@ -146,6 +136,7 @@ p {
 .calendar-month {
     font-size: 1.5em;
     font-weight: 700;
+    color: #333;
 }
 
 .calendar-grid {
@@ -160,6 +151,7 @@ p {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     background-color: #f9f9f9;
+    color: #333;
 }
 
 .calendar-grid div.day {
@@ -167,22 +159,36 @@ p {
 }
 
 .calendar-grid div.today {
-    background-color: #4CAF50;
+    background-color: #6d4c41; /* Marrón suave */
     color: white;
 }
 
 .calendar-grid div:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Gris claro */
 }
 
 /* Responsive Styles */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     h3 {
         font-size: 1.2rem;
     }
 
     p {
-        font-size: 12px;
+        font-size: 16px;
+    }
+
+    #sidebar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sidebar {
+        width: 100%;
+    }
+
+    .calendar-container {
+        max-width: 100%;
     }
 }
 
@@ -191,186 +197,76 @@ img.rounded-circle {
     width: 250px;
     height: 120px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
-/* General Layout Tweaks */
-.section {
-    display: none;
+/* Flexbox for Text and Images */
+.text-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.section:not(.d-none) {
-    display: block;
+.text-image-container p {
+    flex: 1;
+    text-align: justify;
 }
 
-/* Typography Enhancements */
-h3, h4, p {
-    font-family: 'Arial', sans-serif;
-    color: #343a40;
+.side-image {
+    max-width: 30%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Justify Content */
-#sidebar .list-group-flush.mt-auto {
-    margin-top: auto;
+@media (max-width: 768px) {
+    .text-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-image {
+        max-width: 50%;
+    }
 }
 
-/* Estilo principal de los enlaces */
+@media (max-width: 480px) {
+    .side-image {
+        max-width: 80%;
+    }
+}
+
+/* Link Styles */
 .main-link {
-    font-size: 16px; /* Tamaño estándar */
-    color: #007bff; /* Azul para resaltar */
-    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
     font-weight: bold;
-    margin-bottom: 10px; /* Espaciado entre enlaces */
-    display: block; /* Cada enlace ocupa una línea */
+    display: block;
+    margin-bottom: 10px;
 }
 
 .main-link:hover {
-    text-decoration: underline; /* Subrayado en hover */
-    color: #0056b3; /* Azul más oscuro */
+    text-decoration: underline;
+    color: #6d4c41; /* Marrón suave */
 }
 
-/* Estilo de los enlaces secundarios */
 .small-link {
-    font-size: 14px; /* Más pequeño */
-    color: #6c757d; /* Gris claro */
+    font-size: 14px;
+    color: #666;
     text-decoration: none;
-    margin-top: 5px; /* Espaciado superior */
-    display: block; /* Cada enlace ocupa una línea */
 }
 
 .small-link:hover {
-    color: #495057; /* Gris más oscuro */
     text-decoration: underline;
+    color: #333;
 }
 
-/* Estilos para la leyenda */
+/* Highlighted Calendar Cells */
 .calendar-cell.highlight {
-    background-color: #ffeb3b; /* Fondo amarillo */
-    color: #000; /* Texto negro */
+    background-color: #f5f5f5; /* Gris claro */
+    color: #333;
     font-weight: bold;
-    border: 2px solid #fbc02d; /* Borde oscuro */
-}
-
-.calendar-legend {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.highlight-box {
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
-    border: 2px solid #ffa500;
-    margin-right: 10px;
-}
-
-.calendar-legend span {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-/* Contenedor flexbox para texto e imagen */
-.text-image-container {
-    display: flex;
-    flex-direction: row; /* Alineación horizontal por defecto */
-    align-items: center; /* Centrado vertical de texto e imagen */
-    justify-content: space-between; /* Espaciado entre texto e imagen */
-    gap: 20px; /* Espacio entre elementos */
-}
-
-/* Imagen responsiva */
-.side-image {
-    max-width: 30%; /* La imagen ocupará como máximo el 30% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0; /* Sin márgenes */
-    border-radius: 0; /* Sin bordes redondeados */
-    transition: all 0.3s ease-in-out; /* Suaviza el escalado cuando cambia el tamaño */
-}
-
-/* Texto responsivo */
-.text-image-container p {
-    flex: 1; /* El texto ocupa todo el espacio restante */
-    text-align: justify; /* Justificación del texto */
-}
-
-/* Estilos responsivos para pantallas medianas */
-@media (max-width: 1024px) {
-    .side-image {
-        max-width: 40%; /* La imagen se hace un poco más pequeña */
-    }
-}
-
-/* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .text-image-container {
-        flex-direction: column; /* Apila texto e imagen en pantallas pequeñas */
-        align-items: center; /* Centra elementos en la columna */
-        gap: 15px; /* Reduce el espacio entre ellos */
-    }
-
-    .side-image {
-        max-width: 40%; /* Imagen más pequeña en pantallas pequeñas */
-        width: 100%; /* Garantiza que ocupe el espacio disponible */
-    }
-}
-
-/* Estilos para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .side-image {
-        max-width: 60%; /* Imagen más pequeña en pantallas extra pequeñas */
-    }
-}
-
-
-/* Estilo general para las imágenes pequeñas */
-.small-responsive-image {
-    width: auto; /* Mantiene proporción automática */
-    max-width: 150px; /* Tamaño máximo de la imagen */
-    height: auto; /* Mantiene las proporciones */
-    transition: all 0.3s ease-in-out; /* Animación suave */
-}
-
-/* Alinear y centrar botones e imágenes */
-.d-flex.justify-content-center img,
-.d-flex.justify-content-center a {
-    margin:  40px; /* Separación horizontal entre los botones y las imágenes */
-}
-
-/* Espacio adicional entre las imágenes */
-.d-flex.justify-content-center img {
-    margin-bottom: 30px; /* Más espacio entre las imágenes */
-}
-
-/* Responsividad: Ajustar tamaños en pantallas más pequeñas */
-@media (max-width: 768px) {
-    .small-responsive-image {
-        max-width: 120px; /* Reducir tamaño en pantallas medianas */
-    }
-
-    .btn {
-        font-size: 14px; /* Ajustar tamaño del texto en botones */
-    }
-}
-
-@media (max-width: 480px) {
-    .small-responsive-image {
-        max-width: 100px; /* Reducir aún más para pantallas pequeñas */
-    }
-
-    .btn {
-        font-size: 12px; /* Botones más compactos */
-    }
-}
-
-
-/* Estilo del contenedor principal */
-.info-container {
-    text-align: center; /* Centra todo el contenido dentro del contenedor */
-}
-
-.info-container p {
-    text-align: justify; /* Justifica el texto */
-    display: inline-block; /* Esto permite centrar el contenido */
-    max-width: 80%; /* Limita el ancho del texto para mayor legibilidad */
-    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
+    border: 2px solid #ddd;
 }
