@@ -6,10 +6,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h3, h4 {
+            color: #2c2c2c;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .footer {
+            font-size: 16px;
+        }
+
+        /* Container and Layout */
+        .container {
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 1200px;
+        }
+
+        /* Sidebar Styles */
+        #sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding-top: 20px;
+            transition: left 0.3s ease-in-out;
+            z-index: 1040;
+        }
+
+        #sidebar.show {
+            left: 0;
+        }
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            font-size: 30px;
+            color: #555;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            z-index: 100;
+        }
+
+        #sidebar .list-group-item {
+            border: none;
+            padding: 15px 20px;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        #sidebar .list-group-item:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Content Adjustments */
+        .content {
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+
+        /* Profile Styles */
+        .d-flex img {
+            border-radius: 100%;
+            width: 190px;  /* Aumentamos el tamaño de la imagen */
+            height: 140px; /* Aumentamos el tamaño de la imagen */
+            object-fit: cover;
+        }
+
+        .d-flex {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer Styling */
+        .footer-text {
+            font-size: 12px; 
+            text-align: center;
+            padding: 24px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            background-color: #cdcccd;
+            color: #333;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            #sidebar {
+                width: 200px;
+            }
+
+            .content.shifted {
+                margin-left: 200px;
+            }
+
+            /* Reducir el tamaño de las imágenes en móviles */
+            .d-flex img {
+                width: 80px;
+                height: 80px;
+            }
+
+            /* Reducir el tamaño del texto en móviles */
+            .footer-text, .footer {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #sidebar {
+                width: 100%;
+            }
+
+            .content.shifted {
+                margin-left: 0;
+            }
+
+            /* Reducir más el tamaño de las imágenes en pantallas muy pequeñas */
+            .d-flex img {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Reducir aún más el tamaño del texto en pantallas muy pequeñas */
+            .p {
+                font-size: 10px;
+            }
+            .footer{
+                font-size: 10px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -43,53 +206,57 @@
         <div class="list-group">
             <!-- Profile 1 -->
             <div class="d-flex align-items-center mb-4">
-                <img src="../img/esti.png" class="rounded-circle mr-3" alt="Profile" width="60">
+                <img src="../img/esti.png" class="rounded-circle mr-3" alt="Profile">
                 <div>
                     <h5 class="mb-1">Estibaliz Leza</h5>
-                    <p style="text-align: justify;">Estibaliz Leza Euskal Herriko Unibertsitateko Ingeniaritza
-                        Informatikoko ikaslea da. Bere interes nagusiak software garapena eta segurtasuna dira. Gainera,
-                        datu-analisian espezializatzea helburu du. Bere ibilbide akademikoan hainbat proiektu
-                        arrakastatsu burutu ditu, eta beti dago prest teknologiaren azken aurrerapenak ikertzeko eta
-                        aplikatzeko.</p>
+                    <p>Estibaliz Leza Euskal Herriko Unibertsitateko Ingeniaritza Informatikoko ikaslea da. Bere interes nagusiak software garapena eta segurtasuna dira. Gainera, datu-analisian espezializatzea helburu du. Bere ibilbide akademikoan hainbat proiektu arrakastatsu burutu ditu, eta beti dago prest teknologiaren azken aurrerapenak ikertzeko eta aplikatzeko.</p>
                 </div>
             </div>
             <!-- Profile 2 -->
             <div class="d-flex align-items-center mb-4">
-                <img src="../img/jon.png" class="rounded-circle mr-3" alt="Profile" width="60">
+                <img src="../img/jon.png" class="rounded-circle mr-3" alt="Profile">
                 <div>
                     <h5 class="mb-1">Jon Reboiro</h5>
-                    <p style="text-align: justify;">Jon Reboiro Euskal Herriko Unibertsitatean Adimen Artifizialeko
-                        ikaslea da. Robotika eta ikasketa automatikoaren arloetan espezializatzen ari da. Azken urteetan
-                        hainbat proiektu autonomotan parte hartu du, eta ikaskuntza-algoritmoen diseinuan esperientzia
-                        handia du. Bere helburua teknologiak gizartearentzako benetako soluzioak eskaintzea da.</p>
+                    <p>Jon Reboiro Euskal Herriko Unibertsitatean Adimen Artifizialeko ikaslea da. Robotika eta ikasketa automatikoaren arloetan espezializatzen ari da. Azken urteetan hainbat proiektu autonomotan parte hartu du, eta ikaskuntza-algoritmoen diseinuan esperientzia handia du. Bere helburua teknologiak gizartearentzako benetako soluzioak eskaintzea da.</p>
                 </div>
             </div>
             <!-- Profile 3 -->
             <div class="d-flex align-items-center mb-4">
-                <img src="../img/irantzu.png" class="rounded-circle mr-3" alt="Profile" width="60">
+                <img src="../img/irantzu.png" class="rounded-circle mr-3" alt="Profile">
                 <div>
                     <h5 class="mb-1">Irantzu Loero</h5>
-                    <p style="text-align: justify;">Irantzu Loero Euskal Herriko Unibertsitateko Ingeniaritza
-                        Informatikoko ikaslea da. UX/UI diseinu interaktiboan eta garapenean interesa dauka. Bere lanek
-                        beti erabiltzailearen esperientziaren hobekuntza dute helburu. Hainbat ekitalditan parte hartu
-                        du, eta bere sormenak eta zehaztasunak proiektu askotan lagundu dute.</p>
+                    <p>Irantzu Loero Euskal Herriko Unibertsitateko Ingeniaritza Informatikoko ikaslea da. UX/UI diseinu interaktiboan eta garapenean interesa dauka. Bere lanek beti erabiltzailearen esperientziaren hobekuntza dute helburu. Hainbat ekitalditan parte hartu du, eta bere sormenak eta zehaztasunak proiektu askotan lagundu dute.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer Text -->
-    <div class="mt-4">
-        <p style="font-size: 14px;">
+    <div class="footer-text">
+        <p class="footer">
             Webgune hau GrALei buruzko informazioa eskaintzeko sortu da, Euskal Herriko Unibertsitateko (EHU)
             iturrietan oinarrituta. Gure helburua informazio hori modu errazean eta eskuragarrian zabaltzea da, betiere
             iturri ofizialak ordezkatzeko inolako asmorik gabe. Webgune hau eskola ariketa baten parte gisa eraiki dugu,
-            eta horregatik, edukiak prestakuntza helburuekin osatu dira. 
+            eta horregatik, edukiak prestakuntza helburuekin osatu dira.
         </p>
     </div>
-    </div>
 
-    <script src="../js/scripts.js"></script>
+    <script>
+        // Toggle Sidebar
+        const toggleButton = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = sidebar.querySelector('.close-btn');
+        const content = document.querySelector('.content');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+        });
+    </script>
+
 </body>
 
 </html>

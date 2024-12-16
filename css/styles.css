@@ -62,23 +62,27 @@ p {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
     transition: left 0.3s ease-in-out;
-    z-index: 1040;
+    z-index: 100;
 }
 
 #sidebar.show {
     left: 0;
 }
 
+#sidebar .content{
+    z-index: 110;
+}
+
 #sidebar .close-btn {
     position: absolute;
     top: 20px;
     left: 10px;
-    font-size: 24px;
+    font-size: 30px;
     color: #555; /* Gris medio */
     cursor: pointer;
     background: transparent;
     border: none;
-    outline: none;
+    z-index: 1200;
 }
 
 #sidebar .list-group-item {
@@ -240,7 +244,7 @@ img.rounded-circle {
 /* Link Styles */
 .main-link {
     font-size: 16px;
-    color: #333;
+    color: #4f98c5;
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -249,7 +253,7 @@ img.rounded-circle {
 
 .main-link:hover {
     text-decoration: underline;
-    color: #6d4c41; /* Marrón suave */
+    color: #4a76bc; /* Marrón suave */
 }
 
 .small-link {
