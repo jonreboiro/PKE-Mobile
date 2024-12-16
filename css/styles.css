@@ -92,10 +92,37 @@ p {
     transition: all 0.3s ease;
 }
 
+/* Cambiar el color de la opción seleccionada (sin azul) */
+#sidebar .list-group-item.active {
+    background-color: #333; /* Gris oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Cambiar el color cuando pasas el ratón sobre las opciones */
 #sidebar .list-group-item:hover {
-    background-color: #333; /* Negro suave */
+    background-color: #555; /* Gris medio */
     color: white;
 }
+
+/* Estilo para las opciones de "Home" y "About Us" en la parte inferior */
+#sidebar .list-group-flush.mt-auto {
+    margin-top: auto; /* Empuja estas opciones hacia abajo */
+}
+
+/* Asegurarse de que las opciones del menú tengan el mismo estilo */
+#sidebar .list-group-item {
+    color: #444; /* Gris oscuro para el texto */
+    background-color: #fff; /* Fondo blanco */
+    border: none; /* Sin bordes */
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+#sidebar .list-group-item:hover {
+    background-color: #ccc; /* Gris claro */
+    color: white;
+}
+
 
 .content {
     transition: margin-left 0.3s ease-in-out;
