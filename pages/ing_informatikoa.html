@@ -11,8 +11,119 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+   /* Estilos del Header con imagen de fondo */
+.header {
+    background-image: url('../img/ingInformatikoa.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar legibilidad */
+    position: relative;
+}
 
+/* Superposición oscura sobre la imagen de fondo */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparencia para oscurecer la imagen */
+    z-index: 1; /* Coloca la superposición por encima de la imagen, pero detrás del texto */
+}
 
+/* Contenido del header */
+.header-content {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido está por encima de la superposición */
+    text-align: center; /* Centra el texto dentro del header */
+}
+
+/* Título principal (h1) con tamaño responsivo */
+.header h1 {
+    font-size: 5vw; /* El tamaño del texto será proporcional al ancho de la pantalla */
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center; /* Asegura que el texto está centrado */
+}
+
+/* Subtítulo (h2) con tamaño responsivo */
+.header h2 {
+    font-size: 2vw; /* El tamaño de la fuente será también proporcional al ancho de la pantalla */
+    font-weight: 300;
+    margin-top: 0; /* Ajusta el margen superior si es necesario */
+}
+
+/* Para pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 8vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+    .header h2 {
+        font-size: 4vw; /* Ajusta también el tamaño del subtítulo */
+    }
+}
+
+/* Para pantallas muy pequeñas (por ejemplo, teléfonos en modo vertical) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 10vw; /* Ajusta aún más el tamaño del título en pantallas pequeñas */
+    }
+    .header h2 {
+        font-size: 5vw; /* Ajusta el subtítulo en pantallas más pequeñas */
+    }
+}
+
+        
+    /* Estilo para el título */
+    .section-title {
+        font-weight: bold;
+        color: #003366; /* Azul oscuro */
+        font-size: 30px; /* Un poco más grande que el tamaño predeterminado */
+        margin-bottom: 20px;
+    }
+
+    /* Estilo para la lista */
+    .info-list {
+        list-style-type: disc;
+        padding: 0;
+        margin-left: 40px;
+
+    }
+
+    .info-list li {
+        font-size: 1rem; /* Tamaño de texto adecuado */
+        line-height: 1.8; /* Espaciado entre líneas */
+        margin-bottom: 15px; /* Separación entre los elementos de la lista */
+    }
+
+    /* Estilo para los enlaces (botón) */
+    .btn-primary {
+        background-color: #003366; /* Color azul */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        text-decoration: none;
+        
+    }
+
+    /* Efecto hover para el botón */
+    .btn-primary:hover {
+        background-color:#05498d; /* Azul más oscuro */
+    }
+    .nav-link{
+        color:#052c53
+    }
+</style>
+
+</style>
 </head>
 <body>
     <!-- Navbar -->
@@ -40,6 +151,12 @@
         </div>
     </div>
 
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Ingeniaritza informatikoa</h1>
+        </div>
+    </header>
     <!-- Main Content Section -->
     <div class="content container mt-3">
         <!-- Tab Navigation -->
@@ -60,27 +177,36 @@
 
         <!-- Tab Content -->
         <div class="tab-content mt-3" id="subMenuContent">
+
             <!-- Informazioa Section -->
             <div class="tab-pane fade show active" id="informazioa" role="tabpanel" aria-labelledby="informazioa-tab">
-                <h4>Informazioa</h4>
+                <h4 class="section-title">Informazioa</h4>
                 <p>
                     <strong>Gradu Amaierako Lanaren Araudiaren Puntu Garrantzitsuenak:</strong>
                 </p>
-                <ul>
+                <ul class="info-list">
                     <li><strong>Helburua eta izaera:</strong> GRALa banakako proiektu bat da, ikasleek graduko trebetasunak eta ezagutzak aplikatzeko.</li>
                     <li><strong>Jabetza intelektuala:</strong> GRALaren eskubideak ikasleari dagozkio, baina ADDIn argitaratzeko aukera dago.</li>
                     <li><strong>Matrikula:</strong> Matrikulak urtean bi deialdi eskaintzen ditu; lanak defendatzen ez badira, berriro matrikulatu behar da.</li>
                     <li><strong>Memoria eta defentsa:</strong> GRAL memoria 60 orrialde ingurukoa izan behar da. Defentsa publikoa eta epaimahaiaren aurrean egingo da.</li>
                     <li><strong>Epaimahaia eta kalifikazioa:</strong> Epaimahaiak hiru kide ditu, eta kalifikazioa 0-10 eskalan ematen da. Ohorezko matrikulak %5en artean daude.</li>
                     <li><strong>Jasangarritasuna:</strong> GRALek jasangarritasuna, giza eskubideak, eta balio demokratikoak aztertzeko gogoeta bat izan behar dute.</li>
-                    <li><a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu"
-                        class="main-link">Ingenieritza Informatikako GrAL araudi osoa </a></li>
                 </ul>
+                
+                <!-- Botón centrado -->
+                <div class="text-center mt-4">
+                    <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu" class="btn btn-primary" target="_blank">
+                        Ingenieritza Informatikako GrAL araudi osoa
+                    </a>
+                </div>
             </div>
+       
+        
+
 
             <!-- Memoriak Section -->
             <div class="tab-pane fade" id="memoriak" role="tabpanel" aria-labelledby="memoriak-tab">
-                <h4>Memoriak</h4>
+                <h4 class="section-title">Memoriak</h4>
                 <table class="table">
                     <thead>
                         <tr>
@@ -154,7 +280,7 @@
 
             <!-- Egutegia Section -->
             <div class="tab-pane fade" id="egutegia" role="tabpanel" aria-labelledby="egutegia-tab">
-                <h4>Egutegia</h4>
+                <h4 class="section-title">Egutegia</h4>
                 <div class="calendar-container">
                     <div class="calendar-header">
                         <button id="prevMonth" class="btn btn-outline-primary">&lt;</button>
@@ -164,11 +290,11 @@
                     <div id="calendarDays" class="calendar-grid"></div>
                     <div class="calendar-legend mt-3">
                         <div class="highlight-box"></div>
-                        <span>Lehenengo deialdia</span>
+                        <span style="font-weight: bold;">Lehenengo deialdia</span>
                     </div>
                     <div class="mt-4">
                         <h5>Hurrengo defentsen zerrenda</h5>
-                        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/iig-nov" class="btn btn-outline-primary" target="_blank">
+                        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/iig-nov" class="btn btn-primary" target="_blank">
                             Azaroko Defentsak
                         </a>
                     </div>
@@ -178,11 +304,11 @@
 
             <!-- Galdetegia Section (Quiz Section) -->
             <div class="tab-pane fade" id="galdetegia" role="tabpanel" aria-labelledby="galdetegia-tab">
-                <h4>Galdetegia</h4>
+                <h4 class="section-title">Galdetegia</h4>
                 <p>Erantzun ondorengo galderak:</p>
                 <form id="quizForm">
                     <div class="form-group">
-                        <label for="q1">1. Zer da gradu amaierako lana?
+                        <label for="q1" style="font-weight: bold;">1. Zer da gradu amaierako lana?
                         </label>
                         <div>
                             <input type="radio" name="q1" value="incorrect"> Zuzendari batek edo gehiagok gainbegiratutako taldeko lana.<br>
@@ -192,8 +318,8 @@
 
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="q2">2. Zenbat hautazko irakasgai izan ditzake gainditu gabe ikasle batek GRALa defendatzeko?</label>
+                    <div class="form-group" >
+                        <label for="q2" style="font-weight: bold;">2. Zenbat hautazko irakasgai izan ditzake gainditu gabe ikasle batek GRALa defendatzeko?</label>
                         <div>
                             <input type="radio" name="q2" value="incorrect"> Gainditu gabeko irakasgairik ez.<br>
                             <input type="radio" name="q2" value="correct"> Gehienez ere hiru hautazko ikasgai.<br>
@@ -203,7 +329,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="q3">3. Zenbat deialdi ofizial ditu ikasle batek GrALean matrikulatu ondoren?</label>
+                        <label for="q3" style="font-weight: bold;">3. Zenbat deialdi ofizial ditu ikasle batek GrALean matrikulatu ondoren?</label>
                         <div>
                             <input type="radio" name="q3" value="incorrect"> Deialdi bakarra.<br>
                             <input type="radio" name="q3" value="correct"> Bi deialdi.<br>
@@ -213,7 +339,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="q4">4. Zer gertatzen da ikasle batek ez badu bere GRALa defendatzen ezarritako deialdietan?</label>
+                        <label for="q4" style="font-weight: bold;">4. Zer gertatzen da ikasle batek ez badu bere GRALa defendatzen ezarritako deialdietan?</label>
                         <div>
                             <input type="radio" name="q4" value="incorrect"> Luzapena eskatu behar du.<br>
                             <input type="radio" name="q4" value="incorrect"> Defendatzeko eskubidea galtzen du.<br>
@@ -222,8 +348,8 @@
 
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="q5">5. Zein aukerak deskribatzen ditu ondoen GRALean “adostutako” lanak?</label>
+                    <div class="form-group" >
+                        <label for="q5" style="font-weight: bold;">5. Zein aukerak deskribatzen ditu ondoen GRALean “adostutako” lanak?</label>
                         <div>
                             <input type="radio" name="q5" value="incorrect"> Sailek ikasleei esleitzen dieten lanak dira.<br>
                             <input type="radio" name="q5" value="incorrect"> Unibertsitatetik kanpoko enpresetan egindako lanak dira.<br>
@@ -232,8 +358,8 @@
 
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="q6">6. Zein da gradu amaierako lanaren memoriarako gomendatzen den formatua?</label>
+                    <div class="form-group" >
+                        <label for="q6" style="font-weight: bold;">6. Zein da gradu amaierako lanaren memoriarako gomendatzen den formatua?</label>
                         <div>
                             <input type="radio" name="q6" value="incorrect"> 100 orritik gorako txostena.<br>
                             <input type="radio" name="q6" value="incorrect"> Poster grafiko bat, orrialde-mugarik gabea.<br>
@@ -242,8 +368,8 @@
 
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="q7">7. Zenbat denbora du ikasleak bere gradu amaierako lana publikoki defendatzeko?</label>
+                    <div class="form-group" >
+                        <label for="q7" style="font-weight: bold;">7. Zenbat denbora du ikasleak bere gradu amaierako lana publikoki defendatzeko?</label>
                         <div>
                             <input type="radio" name="q7" value="incorrect"> 10 minutu.<br>
                             <input type="radio" name="q7" value="incorrect"> 20 minutu.<br>
