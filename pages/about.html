@@ -16,6 +16,16 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #e0e0e0;
+        }
+
+        .navbar-text {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c2c2c;
         }
 
         h3, h4 {
@@ -42,50 +52,74 @@
             padding: 30px;
             max-width: 1200px;
         }
-
-        /* Sidebar Styles */
-        #sidebar {
+        .about-title {
+            /**fondo rosa;**/
+            background: url('../img/gente.jpg') no-repeat center center/cover;
+            position: relative;
+            height: 50vh;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: rgb(248, 247, 247);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about-title h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        #sidebar {
             position: fixed;
             top: 0;
             left: -250px;
             width: 250px;
             height: 100%;
-            background-color: #fff;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* Cambié a blanco */
+            transition: all 0.3s ease;
+            z-index: 1000;
             padding-top: 20px;
-            transition: left 0.3s ease-in-out;
-            z-index: 1040;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         #sidebar.show {
             left: 0;
         }
 
-        #sidebar .close-btn {
+        .close-btn {
             position: absolute;
-            top: 20px;
-            left: 10px;
-            font-size: 30px;
-            color: #555;
+            top: 10px;
+            right: 10px;
             cursor: pointer;
-            background: transparent;
-            border: none;
-            z-index: 100;
+            font-size: 1.5rem;
+            color: #555; /* Gris medio */
         }
-
-        #sidebar .list-group-item {
+        .list-group-item {
             border: none;
             padding: 15px 20px;
-            color: #555;
+            color: #444; /* Gris oscuro para el texto */
+            background-color: #fff; /* Fondo blanco */
             transition: all 0.3s ease;
         }
 
-        #sidebar .list-group-item:hover {
-            background-color: #333;
+        .list-group-item.active {
+            background-color: #333; /* Gris oscuro */
             color: white;
+        }
+
+        .list-group-item:hover {
+            background-color: #555; /* Gris medio */
+            color: white;
+        }
+
+        .list-group-flush.mt-auto {
+            margin-top: auto;
         }
 
         /* Content Adjustments */
@@ -202,6 +236,9 @@
     </div>
 
     <!-- Main Content -->
+    <div class="about-title">
+        <h1>About Us</h1>
+    </div>
     <div class="content container mt-4">
         <div class="list-group">
             <!-- Profile 1 -->
@@ -242,18 +279,25 @@
     </div>
 
     <script>
-        // Toggle Sidebar
-        const toggleButton = document.getElementById('toggleSidebar');
         const sidebar = document.getElementById('sidebar');
-        const closeBtn = sidebar.querySelector('.close-btn');
-        const content = document.querySelector('.content');
+        const toggleButton = document.getElementById('toggleSidebar');
+        const closeButton = document.querySelector('#sidebar .close-btn');
 
+        // Open the sidebar
         toggleButton.addEventListener('click', () => {
-            sidebar.classList.toggle('show');
+            sidebar.classList.add('show');
         });
 
-        closeBtn.addEventListener('click', () => {
+        // Close the sidebar
+        closeButton.addEventListener('click', () => {
             sidebar.classList.remove('show');
+        });
+
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove('show');
+            }
         });
     </script>
 

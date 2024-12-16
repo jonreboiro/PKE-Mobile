@@ -49,80 +49,54 @@ p {
     font-size: 1.2em;
 }
 
+/* Sidebar */
 #sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #fff; /* Fondo blanco */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Cambié a blanco */
+    transition: all 0.3s ease;
+    z-index: 1000;
     padding-top: 20px;
-    transition: left 0.3s ease-in-out;
-    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar.show {
     left: 0;
 }
 
-#sidebar .content{
-    z-index: 110;
-}
-
-#sidebar .close-btn {
+.close-btn {
     position: absolute;
-    top: 20px;
-    left: 10px;
-    font-size: 30px;
-    color: #555; /* Gris medio */
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    z-index: 1200;
+    font-size: 1.5rem;
+    color: #555; /* Gris medio */
 }
 
-#sidebar .list-group-item {
+.list-group-item {
     border: none;
     padding: 15px 20px;
-    color: #555;
+    color: #444; /* Gris oscuro para el texto */
+    background-color: #fff; /* Fondo blanco */
     transition: all 0.3s ease;
 }
 
-/* Cambiar el color de la opción seleccionada (sin azul) */
-#sidebar .list-group-item.active {
+.list-group-item.active {
     background-color: #333; /* Gris oscuro */
-    color: white; /* Texto blanco */
+    color: white;
 }
 
-/* Cambiar el color cuando pasas el ratón sobre las opciones */
-#sidebar .list-group-item:hover {
+.list-group-item:hover {
     background-color: #555; /* Gris medio */
     color: white;
 }
 
-/* Estilo para las opciones de "Home" y "About Us" en la parte inferior */
-#sidebar .list-group-flush.mt-auto {
-    margin-top: auto; /* Empuja estas opciones hacia abajo */
+.list-group-flush.mt-auto {
+    margin-top: auto;
 }
-
-/* Asegurarse de que las opciones del menú tengan el mismo estilo */
-#sidebar .list-group-item {
-    color: #444; /* Gris oscuro para el texto */
-    background-color: #fff; /* Fondo blanco */
-    border: none; /* Sin bordes */
-    padding: 15px 20px;
-    transition: all 0.3s ease;
-}
-
-#sidebar .list-group-item:hover {
-    background-color: #ccc; /* Gris claro */
-    color: white;
-}
-
 
 .content {
     transition: margin-left 0.3s ease-in-out;
